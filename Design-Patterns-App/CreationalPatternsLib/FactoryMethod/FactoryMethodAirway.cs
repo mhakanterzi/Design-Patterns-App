@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Design_Patterns_App.PatternLib
+namespace Design_Patterns_App.CreationalPatternsLib.FactoryMethod
 {
-    public class FactoryMethodSeaway : FactoryMethodBase
+    public class FactoryMethodAirway : FactoryMethodBase
     {
-        public FactoryMethodSeaway() 
+        public FactoryMethodAirway()
         {
-            DeliveryTime = "20 saat";
-            SpentGas = "100 litre";
+            DeliveryTime = "10 Saat";
+            SpentGas = "50 litre";
         }
         public override void DisplayDetails()
         {

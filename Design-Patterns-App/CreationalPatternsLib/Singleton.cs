@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Design_Pattern.PatternLib;
+using Design_Pattern.CreationalPatternsLib;
 using Design_Pattern.PatternApp;
 
-namespace Design_Pattern.PatternLib
+namespace Design_Pattern.CreationalPatternsLib
 {
     public class Singleton
     {

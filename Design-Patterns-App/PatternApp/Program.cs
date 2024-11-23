@@ -1,6 +1,5 @@
 ﻿using Design_Pattern;
 using Microsoft.VisualBasic;
-using Design_Pattern.PatternLib;
 using Design_Pattern.PatternApp;
 
 
@@ -40,7 +39,7 @@ public class Program
 
     public void CreationalPatterns()
     {
-        var displaymenu = new DisplayMenu();
+        var creationaldisplaymenu = new CreationalDisplayMenu();
         string prompt = "Creational Patterns(Yaratıcı Desenler): Kodun esnekliğini ve yeniden kullanımını arttıran pattern'lerdir.";
         string[] options = { "Singleton","Factory Method","Abstract Factory","Builder","Prototype","Ana Menü" };
         MenuControl main = new MenuControl(options, prompt);
@@ -49,16 +48,19 @@ public class Program
         switch (SelectedIndex)
         {
             case 0:
-                displaymenu.SingletonMenu();
+                creationaldisplaymenu.SingletonMenu();
                 break;
             case 1:
-                displaymenu.FactoryMethodMenu();
+                creationaldisplaymenu.FactoryMethodMenu();
                 break;
             case 2:
+                creationaldisplaymenu.AbstractFactoryMenu();
                 break;
             case 3:
+                creationaldisplaymenu.Builder();
                 break;
             case 4:
+                creationaldisplaymenu.Prototype();
                 break;
             case 5:
                 mainMenu();

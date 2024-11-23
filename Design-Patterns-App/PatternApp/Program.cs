@@ -40,6 +40,7 @@ public class Program
 
     public void CreationalPatterns()
     {
+        var displaymenu = new DisplayMenu();
         string prompt = "Creational Patterns(Yaratıcı Desenler): Kodun esnekliğini ve yeniden kullanımını arttıran pattern'lerdir.";
         string[] options = { "Singleton","Factory Method","Abstract Factory","Builder","Prototype","Ana Menü" };
         MenuControl main = new MenuControl(options, prompt);
@@ -48,10 +49,10 @@ public class Program
         switch (SelectedIndex)
         {
             case 0:
-                var displaymenu = new DisplayMenu();
                 displaymenu.SingletonMenu();
                 break;
             case 1:
+                displaymenu.FactoryMethodMenu();
                 break;
             case 2:
                 break;
@@ -131,7 +132,7 @@ public class Program
 
     private void ExitApp()
     {
-        Console.Write("\nPress any key to exit... ");
+        Console.Write("\nÇıkmak için herhangi bir tuşa basınız... ");
         Console.ReadKey(true);
         Environment.Exit(0);
     }

@@ -1,6 +1,7 @@
 ﻿using Design_Pattern;
 using Microsoft.VisualBasic;
 using Design_Pattern.PatternApp;
+using Design_Patterns_App.PatternApp;
 
 
 public class Program
@@ -70,6 +71,7 @@ public class Program
 
     public void StructuralPatterns()
     {
+        var structuralDisplayMenu = new StructuralDisplayMenu();
         string prompt = "Structural Patterns (Yapısal Desenler): nesnelerin ve sınıfların daha büyük yapılarda nasıl birleşeceğini ayarlar ve bu yapıların esnek ve verimli kalmasını sağlar";
         string[] options = { "Adapter","Bridge","Composite","Decorator","Facade","Fly Weight","Proxy","Ana Menü" };
         MenuControl main = new MenuControl (options, prompt);
@@ -78,6 +80,7 @@ public class Program
         switch (SelectedIndex) 
         {
             case 0:
+                structuralDisplayMenu.AdapterMenu();
                 break;
             case 1:
                 break;

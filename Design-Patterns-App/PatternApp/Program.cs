@@ -83,6 +83,7 @@ public class Program
                 structuralDisplayMenu.AdapterMenu();
                 break;
             case 1:
+                structuralDisplayMenu.BridgeMenu();
                 break;
             case 2:
                 break;

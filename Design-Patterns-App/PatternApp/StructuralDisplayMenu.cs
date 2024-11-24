@@ -1,4 +1,5 @@
 ﻿using Design_Patterns_App.StructuralPatternsLib.Adapter;
+using Design_Patterns_App.StructuralPatternsLib.Bridge;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -34,6 +35,32 @@ namespace Design_Patterns_App.PatternApp
 
             Console.WriteLine("Çıkmak için herhangi bir uşa basınız...");
             Console.ReadKey();
+            var program = new Program();
+            program.StructuralPatterns();
+        }
+
+        public void BridgeMenu()
+        {
+            Console.Clear ();
+            Console.WriteLine("Bridge: Bu yöntemde büyük sınıfları veya bağlantılı sınıfları birbirinden bağımsız şekilde geliştirmemizi sağlar.\n\n");
+
+            Console.WriteLine("burada renkleri ve şekilleri ayrı sınıflarda tanımlayıp sonradan birleştirdik. Bu sayede geliştirme aşamaları daha rahat yapılabilir");
+
+            IColor red = new ColorRed();
+            IColor green = new ColorGreen();
+            IColor blue = new ColorBlue();
+
+            Shape circle = new Circle(red);
+            Shape square = new Square(green);
+            Shape circle2 = new Circle(blue);
+
+            // Draw shapes
+            circle.Draw();
+            square.Draw();
+            circle2.Draw();
+
+
+            Console.ReadKey ();
             var program = new Program();
             program.StructuralPatterns();
         }

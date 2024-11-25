@@ -1,6 +1,7 @@
 ﻿using Design_Patterns_App.StructuralPatternsLib.Adapter;
 using Design_Patterns_App.StructuralPatternsLib.Bridge;
 using Design_Patterns_App.StructuralPatternsLib.Composit;
+using Design_Patterns_App.StructuralPatternsLib.Decorator;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -92,6 +93,25 @@ namespace Design_Patterns_App.PatternApp
 
             Console.ReadKey();
 
+            var program = new Program();
+            program.StructuralPatterns();
+        }
+
+        public void DecoratorMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Decorator: Bu yapı nesnelere yeni özellikler eklememizi sağlar. Bu yöntem sayesinde istediğimiz nesneye rahatça yeni davranışlar ekleyip çıkartabiliriz.\n\n");
+
+            IGame game = new AC();
+            Console.WriteLine($"{game.GetName()} : Normal Package ->{game.GetCost()} $");
+
+            game = new SkinsDLC(game);
+            Console.WriteLine($"{game.GetName()} : Gold Package -> {game.GetCost()} $");
+
+            game = new MapDLC(game);
+            Console.WriteLine($"{game.GetName()} : Platinum Package -> {game.GetCost()} $");
+
+            Console.ReadKey ();
             var program = new Program();
             program.StructuralPatterns();
         }

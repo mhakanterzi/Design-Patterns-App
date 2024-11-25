@@ -89,6 +89,7 @@ public class Program
                 structuralDisplayMenu.CompositMenu();
                 break;
             case 3:
+                structuralDisplayMenu.DecoratorMenu();
                 break;
             case 4:
                 break;

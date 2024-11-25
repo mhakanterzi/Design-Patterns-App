@@ -1,5 +1,6 @@
 ﻿using Design_Patterns_App.StructuralPatternsLib.Adapter;
 using Design_Patterns_App.StructuralPatternsLib.Bridge;
+using Design_Patterns_App.StructuralPatternsLib.Composit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -61,6 +62,36 @@ namespace Design_Patterns_App.PatternApp
 
 
             Console.ReadKey ();
+            var program = new Program();
+            program.StructuralPatterns();
+        }
+
+        public void CompositMenu()
+        {
+            Console.Clear ();
+            Console.WriteLine("Composite: Bu yapı nesneleri ağaç yapısında düzenlemeye ve tek bir nesne gibi işlem yapmamızı sağlar.");
+
+            Files file1 = new Files("Belge1.txt");
+            Files file2 = new Files("Resim1.png");
+            Files file3 = new Files("Sunum.pptx");
+            Files file4 = new Files("Notlar.docx");
+
+            Folder folder1 = new Folder("İş");
+            Folder folder2 = new Folder("Projeler");
+            Folder rootFolder = new Folder("Ana Klasör");
+
+            folder1.AddItem(file1);
+            folder1.AddItem(file2);
+            folder2.AddItem(file3);
+
+            rootFolder.AddItem(folder1);
+            rootFolder.AddItem(folder2);
+            rootFolder.AddItem(file4);
+
+            rootFolder.Display("");
+
+            Console.ReadKey();
+
             var program = new Program();
             program.StructuralPatterns();
         }

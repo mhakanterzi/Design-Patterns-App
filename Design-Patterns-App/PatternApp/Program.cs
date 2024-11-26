@@ -95,8 +95,10 @@ public class Program
                 structuralDisplayMenu.FacadeMenu();
                 break;
             case 5:
+                structuralDisplayMenu.FlyWeightMenu();
                 break;
             case 6:
+                structuralDisplayMenu.ProxyMenu();
                 break;
             case 7:
                 mainMenu();

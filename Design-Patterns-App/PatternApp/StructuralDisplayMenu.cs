@@ -3,6 +3,7 @@ using Design_Patterns_App.StructuralPatternsLib.Bridge;
 using Design_Patterns_App.StructuralPatternsLib.Composit;
 using Design_Patterns_App.StructuralPatternsLib.Decorator;
 using Design_Patterns_App.StructuralPatternsLib.Facade;
+using Design_Patterns_App.StructuralPatternsLib.FlyWeight;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -127,6 +128,29 @@ namespace Design_Patterns_App.PatternApp
             launch.StartsPc();
 
             Console.ReadKey();
+            var program = new Program();
+            program.StructuralPatterns();
+        }
+
+        public void FlyWeightMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Fly Weight: Bu yapı aynı türden çok sayıda nesne oluşturmanın maliyetli olacağından bellekte tasarruf etmek için kullanılır. Ortak nesne durumları paylaşılır.\n\n");
+
+            AddingCar addingCar = new AddingCar();
+            addingCar.AddCar();
+
+            Console.ReadKey();
+            var program = new Program();
+            program.StructuralPatterns();
+        }
+
+        public void ProxyMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Proxy: ");
+
+
             var program = new Program();
             program.StructuralPatterns();
         }

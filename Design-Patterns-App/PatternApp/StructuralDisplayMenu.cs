@@ -4,6 +4,7 @@ using Design_Patterns_App.StructuralPatternsLib.Composit;
 using Design_Patterns_App.StructuralPatternsLib.Decorator;
 using Design_Patterns_App.StructuralPatternsLib.Facade;
 using Design_Patterns_App.StructuralPatternsLib.FlyWeight;
+using Design_Patterns_App.StructuralPatternsLib.Proxy;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -148,9 +149,12 @@ namespace Design_Patterns_App.PatternApp
         public void ProxyMenu()
         {
             Console.Clear();
-            Console.WriteLine("Proxy: ");
+            Console.WriteLine("Proxy: Bu yöntem sayesinde bir nesne için geçici bir vekil atayarak gerçek nesneye olan erişimi kontrol etmemize olanak sağlar.\n\n");
 
+            ProxyRun run = new ProxyRun();
+            run.ProxyStart();
 
+            Console.ReadKey();
             var program = new Program();
             program.StructuralPatterns();
         }

@@ -92,6 +92,7 @@ public class Program
                 structuralDisplayMenu.DecoratorMenu();
                 break;
             case 4:
+                structuralDisplayMenu.FacadeMenu();
                 break;
             case 5:
                 break;

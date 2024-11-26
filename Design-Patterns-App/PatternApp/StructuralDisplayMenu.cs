@@ -2,6 +2,7 @@
 using Design_Patterns_App.StructuralPatternsLib.Bridge;
 using Design_Patterns_App.StructuralPatternsLib.Composit;
 using Design_Patterns_App.StructuralPatternsLib.Decorator;
+using Design_Patterns_App.StructuralPatternsLib.Facade;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -112,6 +113,20 @@ namespace Design_Patterns_App.PatternApp
             Console.WriteLine($"{game.GetName()} : Platinum Package -> {game.GetCost()} $");
 
             Console.ReadKey ();
+            var program = new Program();
+            program.StructuralPatterns();
+        }
+
+        public void FacadeMenu()
+        {
+            Console.Clear ();
+            Console.WriteLine("Facade: Bu yöntem kodları sadeleştirmeye yarıyor. Kodun alt sınıflarını gizler. Tüm nesneleri tek tek başlatmanın zor olacağından tek kısımda başlatılır.\n\n");
+
+            FacadeStart launch = new FacadeStart();
+
+            launch.StartsPc();
+
+            Console.ReadKey();
             var program = new Program();
             program.StructuralPatterns();
         }

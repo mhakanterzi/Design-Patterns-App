@@ -123,6 +123,7 @@ public class Program
                 behavioralDisplayMenu.CommandMenu();
                 break;
             case 2:
+                behavioralDisplayMenu.IteratorMenu();
                 break;
             case 3:
                 break;

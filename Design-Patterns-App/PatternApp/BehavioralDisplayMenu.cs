@@ -1,5 +1,6 @@
 ﻿using Design_Patterns_App.BehavioralPatternsLib.ChainOfResponsibility;
 using Design_Patterns_App.BehavioralPatternsLib.Command;
+using Design_Patterns_App.BehavioralPatternsLib.Iterator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,30 @@ namespace Design_Patterns_App.PatternApp
 
             control.UndoCommand();    
             control.UndoCommand();
+
+            Console.ReadKey();
+            var program = new Program();
+            program.BehavioralPatterns();
+        }
+
+        public void IteratorMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Iterator: Bu yöntem bir koleksiyonun elemanlarını açığa çıkarmadan öğeleri arasında gezinmemize olanak sağlar.\n\n");
+
+            GTA books = new GTA();
+            books.Add("Grand Theft Auto San Andreas");
+            books.Add("Grand Theft Auto Vice City");
+            books.Add("Grand Theft Auto IV");
+            books.Add("Grand Theft Auto V");
+
+            IIterator iterator = books.CreateIterator();
+
+            while (iterator.HasNext())
+            {
+                Console.WriteLine(iterator.Next());
+            }
+
 
             Console.ReadKey();
             var program = new Program();

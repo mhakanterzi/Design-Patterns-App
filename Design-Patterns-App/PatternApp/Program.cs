@@ -108,6 +108,7 @@ public class Program
 
     public void BehavioralPatterns()
     {
+        var behavioralDisplayMenu = new BehavioralDisplayMenu();
         string prompt = "Behavioral Patterns (Davranışsal Desenler): nesneler arası etkileşimi ve sorumluluk dağılımlarını gösterir";
         string[] options = { "Chain of Responsibility","Command","Iterator","Mediator","Memento","Observer","State","Strategy","template Method","Visitor","Ana Menü" };
         MenuControl main = new MenuControl(options, prompt);
@@ -116,8 +117,10 @@ public class Program
         switch (SelectedIndex)
         {
             case 0:
+                behavioralDisplayMenu.ChainOfResponsibilityMenu();
                 break;
             case 1:
+                behavioralDisplayMenu.CommandMenu();
                 break;
             case 2:
                 break;

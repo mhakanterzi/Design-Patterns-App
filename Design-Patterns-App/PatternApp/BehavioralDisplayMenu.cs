@@ -6,6 +6,7 @@ using Design_Patterns_App.BehavioralPatternsLib.Memento;
 using Design_Patterns_App.BehavioralPatternsLib.Observer;
 using Design_Patterns_App.BehavioralPatternsLib.State;
 using Design_Patterns_App.BehavioralPatternsLib.Strategy;
+using Design_Patterns_App.BehavioralPatternsLib.TemplateMethod;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -147,8 +148,10 @@ namespace Design_Patterns_App.PatternApp
         public void TemplateMethodMenu()
         {
             Console.Clear();
-            Console.WriteLine("Template Method: ");
+            Console.WriteLine("Template Method: Bu yöntem bir işlemin genel algoritmasını tanımlamak ve alt sınıfların bu algoritmanın belirli adımlarını özelleştirmesine olanak tanır. \n\n");
 
+            TempleRun run = new TempleRun();
+            run.Run();
 
             Console.ReadKey();
             var program = new Program();

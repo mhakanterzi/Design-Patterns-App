@@ -2,6 +2,10 @@
 using Design_Patterns_App.BehavioralPatternsLib.Command;
 using Design_Patterns_App.BehavioralPatternsLib.Iterator;
 using Design_Patterns_App.BehavioralPatternsLib.Mediator;
+using Design_Patterns_App.BehavioralPatternsLib.Memento;
+using Design_Patterns_App.BehavioralPatternsLib.Observer;
+using Design_Patterns_App.BehavioralPatternsLib.State;
+using Design_Patterns_App.BehavioralPatternsLib.Strategy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -77,10 +81,73 @@ namespace Design_Patterns_App.PatternApp
         {
             Console.Clear();
             Console.WriteLine("Mediator: Bu yöntem nesneler arasındaki doğrudan işletişimleri kısıtlar ve bu iletişimi bir mediator " +
-                "nesnesi ile yapmaya zorlar.");
+                "nesnesi ile yapmaya zorlar.\n\n");
 
             HomeMediatorRun run = new HomeMediatorRun();
             run.HomeRun();
+
+
+            Console.ReadKey();
+            var program = new Program();
+            program.BehavioralPatterns();
+        }
+
+        public void MementoMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Memento: Bu yöntem bir nesnenin bilgilerini ifşa etmeden bir önceki haline dönebilmesi için kullanılır.\n\n");
+
+            MementoRun run = new MementoRun();
+            run.RunMemento();
+
+            Console.ReadKey();
+            var program = new Program();
+            program.BehavioralPatterns();
+        }
+
+        public void ObserverMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Observer: Bu yöntem ile bir nesne güncellendiği zaman onu gözlemleyen diğer nesneler de güncellenir. \n\n");
+
+            ObserverRun run = new ObserverRun();
+            run.RunObserver();
+
+            Console.ReadKey();
+            var program = new Program();
+            program.BehavioralPatterns();
+        }
+
+        public void StateMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("State: Bu yöntem ile bir nesnenin içindeki durum değiştiğiinde davranışının da değişmesine olanak tanır.\n\n");
+
+            RunState runState = new RunState();
+            runState.StateRun();
+
+            Console.ReadKey();
+            var program = new Program();
+            program.BehavioralPatterns();
+        }
+
+        public void StrategyMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Strategy: Bir sınıfın davranışını çalışma zamanında değiştirmek için kullanılan bir tasarım desenidir. Farklı algoritmalar arasından seçim yapmayı kolaylaştırır.\n\n");
+
+            RunStrategy run = new RunStrategy();
+            run.Run();
+
+            Console.ReadKey();
+            var program = new Program();
+            program.BehavioralPatterns();
+        }
+
+        public void TemplateMethodMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Template Method: ");
 
 
             Console.ReadKey();

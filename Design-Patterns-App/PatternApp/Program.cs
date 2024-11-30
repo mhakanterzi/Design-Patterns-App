@@ -129,14 +129,19 @@ public class Program
                 behavioralDisplayMenu.MediatorMenu();
                 break;
             case 4:
+                behavioralDisplayMenu.MementoMenu();
                 break;
             case 5:
+                behavioralDisplayMenu.ObserverMenu();
                 break;
             case 6:
+                behavioralDisplayMenu.StateMenu();
                 break;
             case 7:
+                behavioralDisplayMenu.StrategyMenu();
                 break;
             case 8:
+                behavioralDisplayMenu.TemplateMethodMenu();
                 break;
             case 9:
                 break;

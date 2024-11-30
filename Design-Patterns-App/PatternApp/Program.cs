@@ -144,6 +144,7 @@ public class Program
                 behavioralDisplayMenu.TemplateMethodMenu();
                 break;
             case 9:
+                behavioralDisplayMenu.VisitorMenu();
                 break;
             case 10:
                 mainMenu();

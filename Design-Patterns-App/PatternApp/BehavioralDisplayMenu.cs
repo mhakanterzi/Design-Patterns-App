@@ -1,6 +1,7 @@
 ﻿using Design_Patterns_App.BehavioralPatternsLib.ChainOfResponsibility;
 using Design_Patterns_App.BehavioralPatternsLib.Command;
 using Design_Patterns_App.BehavioralPatternsLib.Iterator;
+using Design_Patterns_App.BehavioralPatternsLib.Mediator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,6 +66,21 @@ namespace Design_Patterns_App.PatternApp
             {
                 Console.WriteLine(iterator.Next());
             }
+
+
+            Console.ReadKey();
+            var program = new Program();
+            program.BehavioralPatterns();
+        }
+
+        public void MediatorMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Mediator: Bu yöntem nesneler arasındaki doğrudan işletişimleri kısıtlar ve bu iletişimi bir mediator " +
+                "nesnesi ile yapmaya zorlar.");
+
+            HomeMediatorRun run = new HomeMediatorRun();
+            run.HomeRun();
 
 
             Console.ReadKey();

@@ -126,6 +126,7 @@ public class Program
                 behavioralDisplayMenu.IteratorMenu();
                 break;
             case 3:
+                behavioralDisplayMenu.MediatorMenu();
                 break;
             case 4:
                 break;
